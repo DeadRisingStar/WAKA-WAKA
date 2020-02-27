@@ -1,0 +1,108 @@
+<!doctype HTML> 
+<html>
+
+<!-- Head --> 
+<head> 
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<!-- Main Body -->
+
+<body>
+
+<!-- Header -->
+
+<header>
+    <div class="container">
+        <h1>Tech Facts</h1>
+    </div>
+</header>
+
+<!-- Animation (JS) -->
+
+    <article>
+        
+        <!-- Left Canvas -->
+        <div class="articleback">
+            <div class="container">
+                
+                <canvas id="canvas" onload="animate1()"></canvas>
+                
+            </div>
+            <!-- Canvas1 Script -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script type="text/javascript">
+
+                   
+
+                    var canvas = $('#canvas')[0].getContext('2d');
+                    canvas.font = '12px Courier';
+                    
+
+                    var str = '1. Bill Gates founded Oracle. \n2. Raspberry Pi is American made. \n3. Steve Jobs worked at Nintendo. \n4. Bill Gates never got arrested. \n5. Android is not superior to Apple. \n6.Apple has been recently inovated \n  since steeve jobs died.';
+                    var a = 25 ;
+                    var b = 30 ;
+                    var lineheight = 15;
+                    var lines = str.split('\n');
+
+                    for (var j = 0; j<lines.length; j++)
+                    
+                    
+                    canvas.fillText(lines[j], a, b + (j*lineheight) );
+
+                console.log(canvas)
+                    
+                </script>
+         
+         
+
+        <!-- Right Canvas -->
+
+            <div class="container">
+                <canvas id="canvas2"></canvas>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                <script type="text/javascript">
+                    
+                    var canvas2 = $('#canvas2')[0].getContext('2d');
+                    canvas2.font = '12px Courier';
+                    
+
+                    var str = '  Created by \n Nathan Asper \n       & \nLester Laughman';
+                    var a = 100 ;
+                    var b = 50 ;
+                    var lineheight = 15;
+                    var lines = str.split('\n');
+
+                    for (var j = 0; j<lines.length; j++)
+                    
+                        
+                    canvas2.fillText(lines[j], a, b + (j*lineheight) );
+                    
+                    
+                    console.log(canvas2)
+                    
+                  // Broken Lines of text back up
+                  //  var element= document.getElementById("canvas2");
+                  //  var ctx = element.getContext("2d");        
+                  //  var x = 'Created by ' + 'Nathan Asper' + ' & ' + 'Lester Laughman';
+                  //  ctx.font = "10px Arial";
+                  //  ctx.fillText("start", 10, 50);
+                    
+                    
+
+
+                </script>
+            </div>
+        </div>
+    </article>
+
+<!-- Footer -->
+
+<footer>
+    <p>Made with not alot of time. More time needed to animate. The JS to move.</p>
+</footer>
+
+
+</body>
+    
+</html> 
